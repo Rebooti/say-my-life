@@ -7,13 +7,28 @@
   >
     <LoadingPage :show="loading" />
 
-    <Navbar @toggle-sidebar="toggleSidebar" v-if="shouldShowNavbar" />
+    <Navbar
+      @toggle-sidebar="toggleSidebar"
+      v-if="shouldShowNavbar"
+    />
 
-    <div @click="toggleSidebar(false)" class="sidebar-mask"></div>
+    <div
+      @click="toggleSidebar(false)"
+      class="sidebar-mask"
+    ></div>
 
-    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-      <slot #top name="sidebar-top" />
-      <slot #bottom name="sidebar-bottom" />
+    <Sidebar
+      :items="sidebarItems"
+      @toggle-sidebar="toggleSidebar"
+    >
+      <slot
+        #top
+        name="sidebar-top"
+      />
+      <slot
+        #bottom
+        name="sidebar-bottom"
+      />
     </Sidebar>
 
     <Lock v-if="haveLock()" />
@@ -21,12 +36,24 @@
 
     <Home v-if="$page.frontmatter.home" />
 
-    <Page :sidebar-items="sidebarItems" v-if="pageVisible">
-      <slot #top name="page-top" />
-      <slot #bottom name="page-bottom" />
+    <Page
+      :sidebar-items="sidebarItems"
+      v-if="pageVisible"
+    >
+      <slot
+        #top
+        name="page-top"
+      />
+      <slot
+        #bottom
+        name="page-bottom"
+      />
     </Page>
 
-    <div class="record-wrap" v-if="pageVisible">
+    <div
+      class="record-wrap"
+      v-if="pageVisible"
+    >
       <a href="http://beian.miit.gov.cn/">浙ICP备18029315号-2</a>
     </div>
   </div>
@@ -163,6 +190,7 @@ export default {
           '/life/plan/2018.html',
           '/life/plan/2019.html',
           '/life/plan/2020.html',
+          '/life/plan/2021.html',
           '/life/diary/2019-03.html',
           '/life/diary/2019-05.html',
           '/life/diary/2019-09.html',

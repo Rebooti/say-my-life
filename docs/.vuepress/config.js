@@ -184,7 +184,8 @@ module.exports = {
                     children: [
                         '/life/plan/2018',
                         '/life/plan/2019',
-                        '/life/plan/2020'
+                        '/life/plan/2020',
+                        '/life/plan/2021',
                     ]
                 },
                 {
